@@ -1,0 +1,36 @@
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+# This file is a .ucf for Mimas V2                                                                    #
+# To use it in your project :                                                                         #
+# * Remove or comment the lines corresponding to unused pins in the project                           #
+# * Rename the used signals according to the your project                                             #
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+
+#**************************************************************************************************************************************************#
+#                                            UCF for Waxwing Spartan 6 Development Board                                                           #
+#**************************************************************************************************************************************************#
+
+CONFIG VCCAUX = "3.3" ;
+
+   NET "clock"      LOC = V10 | IOSTANDARD = LVCMOS33 | PERIOD = 100MHz;
+
+   
+
+
+###################################################################################################################################################
+#                                               Seven Segment Display                                                                             #
+################################################################################################################################################### 
+    NET "sevenseg[0]"     LOC = A5  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
+    NET "sevenseg[1]"     LOC = C6  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
+    NET "sevenseg[2]"     LOC = D6  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
+	 NET "sevenseg[3]"     LOC = C5  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
+    NET "sevenseg[4]"     LOC = C4  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
+    NET "sevenseg[5]"     LOC = A4  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
+	 NET "sevenseg[6]"     LOC = B4  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
+	  NET "sevenseg[7]"     LOC = A3  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
+    NET "enable[2]"           LOC = B3  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;                              # Enables for Seven Segment
+    NET "enable[1]"           LOC = A2  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
+    NET "enable[0]"           LOC = B2  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
+	 
+    NET "rev"           LOC = M18   | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; 
+
+	 		 	 
